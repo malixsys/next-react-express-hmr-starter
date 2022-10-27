@@ -1,0 +1,53 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": false,
+    "removeComments": true,
+    "noLib": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "typeRoots" : ["./node_modules/@types"],
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "target": "es2021",
+    "noImplicitAny": false,
+    "strict": true,
+    "resolveJsonModule": true,
+    "preserveConstEnums": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "sourceMap": false,
+    "baseUrl": ".",
+    "noUnusedLocals": false,
+    "noUnusedParameters": false
+  },
+  "include": [
+    "./server"
+  ],
+  "exclude": [
+    "dist",
+    "node_modules",
+    "pages",
+    "./.next/**/*.*",
+    ".cache",
+    "src"
+  ],
+  "ts-node": {
+    "swc": false, // crashes on stackblitz
+    "require": ["tsconfig-paths/register"],
+    "transpileOnly": true,
+    "ignore": [
+      "dist",
+      "node_modules",
+      "pages",
+      "\\.next",
+      ".cache",
+      "src"
+    ]
+  }
+}
