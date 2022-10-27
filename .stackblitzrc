@@ -1,0 +1,7 @@
+{
+  "startCommand": "npm run run:stackblitz",
+   "env": {
+      "NODE_ENV": "development",
+      "NEXT_PUBLIC_API_BASE_URL":"http://localhost:3000"
+    }
+}
