@@ -1,13 +1,17 @@
 'use client';
-
-import { useState } from 'react';
+import React from 'react';
+import { Button, Container, Divider, Dropdown, Grid, Header, Image, List, Menu, Segment } from 'semantic-ui-react';
+import { useMainContext } from './root/sidebarContainer';
 
 export const HomePage = () => {
-  const [count, setCount] = useState(0);
+  const { toggleSidebar, open, user } = useMainContext();
   return (
-    <section>
-      <h5>Count: {count}</h5>
-      <button onClick={() => setCount((old) => old + 1)}>count++</button>
-    </section>
+    <Segment raised loading={!user || user.loading}>
+      <Header>Home</Header>
+      <Button primary onClick={toggleSidebar}>
+        {open ? 'close' : 'open'}
+      </Button>
+      <pre>{JSON.stringify(user, null, 2)}</pre>
+    </Segment>
   );
 };

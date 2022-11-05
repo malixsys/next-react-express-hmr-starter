@@ -1,0 +1,123 @@
+/* styles copied from https://github.com/vercel/next.js/blob/canary/examples/layout-component/global.css */
+body {
+    margin: 0;
+
+    min-height: 100vh;
+    font-size: 18px;
+    font-family: 'Quicksand', 'Helvetica Neue Light', Helvetica, Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Quicksand', 'Helvetica Neue Light', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+}
+
+h1,
+h2,
+.ui.button,
+.ui.header,
+h2.ui.header,
+.ui.modal > .header,
+.ui.statistic > .label,
+.ui.statistics .statistic > .label {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+}
+
+.ui.segment[class*="bottom attached"].main-content {
+    margin-bottom: 0;
+}
+
+@media only screen and (min-width: 768px) {
+    .main-content > .pusher {
+        width: calc(100% - 262px);
+        margin-left: 260px;
+    }
+}
+
+.main-content > .pusher.closed {
+    width: 100%;
+    margin-left: 0;
+}
+
+@media only screen and (max-width: 767px) {
+    .sidebarMenu {
+        display: none;
+    }
+}
+
+.sidebarMenu .ui.vertical.menu {
+    background: #103449;
+    display: flex !important;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: stretch;
+}
+
+.sidebarMenu .ui.vertical.menu .item {
+    border-bottom: solid 1px #ffffff80;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    font-family: Roboto Slab, serif;
+    font-weight: 300;
+}
+
+.item.logo img {
+    height: 45px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.ui.menu .item.logo {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+.sidebarMenu .ui.vertical.menu div {
+    flex: 0 1 auto;
+    align-self: auto;
+}
+
+.sidebarMenu .ui.vertical.menu div.right {
+    flex-grow: 1;
+    flex-shrink: 0;
+    align-self: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-content: flex-start;
+    align-items: stretch;
+}
+
+.sidebarMenu .ui.vertical.menu .item.bottom {
+    border-top: solid 1px #ffffff80;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: black;
+    background-color: #e0e1e2;
+    font-weight: normal;
+    font-size: 13px !important;
+    text-align: center;
+}
+
+.sidebarMenu .ui.vertical.menu .item.bottom.green {
+    color: white;
+    background: #20a254;
+}
+.main-content .ui.menu.mobile-menu {
+    display: none;
+}
+@media only screen and (max-width: 767px) {
+    .main-content .ui.menu.mobile-menu {
+        background: #103449;
+        display: flex;
+    }
+}

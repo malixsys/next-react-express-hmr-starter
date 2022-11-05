@@ -1,6 +1,10 @@
-import express from 'express';
+import * as express from 'express';
 
 const router = express.Router();
+
+router.get('/me', async (req, res) => {
+  res.status(200).json({ anonymous: true });
+});
 
 router.get('/users', async (req, res) => {
   // demonstrate slow

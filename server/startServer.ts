@@ -1,5 +1,8 @@
+// @ts-ignore
 import express, { Request, Response } from 'express';
+// @ts-ignore
 import http from 'http';
+// @ts-ignore
 import colors from 'colors';
 import { default as initialRoutes } from './routes';
 import { startFront } from './startFront';
